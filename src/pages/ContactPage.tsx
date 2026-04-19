@@ -1,10 +1,10 @@
-import { useState } from "react";
 import type { Locale } from "@/i18n/translations";
 import { t as translate } from "@/i18n/translations";
+import { GoogleMap } from "@/components/GoogleMap";
 
 export function ContactPage({ locale }: { locale: Locale }) {
+  // Get translations
   const t = translate(locale).contact;
-  const [sent, setSent] = useState(false);
 
   return (
     <article className="pt-40 pb-32">
@@ -60,82 +60,29 @@ export function ContactPage({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
-          className="md:col-span-7 bg-card/60 border border-border p-8 md:p-12"
-        >
-          <p className="text-eyebrow">{t.writeMessage}</p>
-          <div className="hairline w-12 mt-3 mb-8" />
+        {/* Google Map */}
+        <div className="md:col-span-7 bg-card/60 border border-border">
+          <div className="p-8 md:p-12">
+            <p className="text-eyebrow">Studio Location</p>
+            <div className="hairline w-12 mt-3 mb-8" />
 
-          {sent ? (
-            <div className="py-12 text-center">
-              <p className="text-display text-3xl text-bone italic">{t.thankYou}</p>
-              <p className="text-muted-foreground mt-3">{t.received}</p>
+            <div className="aspect-[4/3] mb-6">
+              <GoogleMap height="100%" />
             </div>
-          ) : (
-            <div className="space-y-7">
-              <Field label={t.name} id="name" required />
-              <Field label={t.emailLabel} id="email" type="email" required />
-              <Field label={t.subject} id="subject" />
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-[0.65rem] tracking-[0.32em] uppercase text-muted-foreground mb-3"
-                >
-                  {t.message}
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  required
-                  className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-bone placeholder:text-muted-foreground/40 resize-none transition-colors"
-                  placeholder={t.placeholder}
-                />
-              </div>
 
-              <button
-                type="submit"
-                className="mt-4 inline-flex items-center gap-3 border border-gold px-8 py-4 text-[0.7rem] tracking-[0.32em] uppercase text-gold hover:bg-gold hover:text-background transition-colors duration-500"
+            <div className="flex justify-center">
+              <a
+                href="https://maps.app.goo.gl/yvFL1m96mM29CEMs8"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 border border-gold px-6 py-3 text-[0.7rem] tracking-[0.32em] uppercase text-gold hover:bg-gold hover:text-background transition-colors duration-500"
               >
-                {t.send}
-              </button>
+                Open in Maps ↗
+              </a>
             </div>
-          )}
-        </form>
+          </div>
+        </div>
       </section>
     </article>
-  );
-}
-
-function Field({
-  label,
-  id,
-  type = "text",
-  required,
-}: {
-  label: string;
-  id: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={id}
-        className="block text-[0.65rem] tracking-[0.32em] uppercase text-muted-foreground mb-3"
-      >
-        {label}
-        {required && <span className="text-gold"> *</span>}
-      </label>
-      <input
-        id={id}
-        type={type}
-        required={required}
-        className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-bone placeholder:text-muted-foreground/40 transition-colors"
-      />
-    </div>
   );
 }
