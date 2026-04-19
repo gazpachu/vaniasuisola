@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AboutPage } from "@/pages/AboutPage";
+import { HomePage } from "@/pages/HomePage";
 import { t } from "@/i18n/translations";
 
-const tr = t("en").about;
+const tr = t("es").home;
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute("/es/")({
   head: () => ({
     meta: [
       { title: tr.metaTitle },
@@ -13,5 +13,5 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: tr.ogDesc },
     ],
   }),
-  component: () => <AboutPage locale="en" />,
+  component: () => <HomePage locale="es" />,
 });
