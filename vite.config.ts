@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
+  base: "/",
   plugins: [
     TanStackRouterVite(),
     react(),
@@ -17,5 +18,10 @@ export default defineConfig({
   },
   build: {
     outDir: "docs",
+    rollupOptions: {
+      external: [],
+    },
+    copyPublicDir: true,
   },
+  publicDir: "public",
 });
