@@ -86,7 +86,8 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div>
               <p className="text-eyebrow">{t.selectedWorks}</p>
               <h2 className="text-display text-4xl md:text-6xl text-bone mt-4">
-                {t.recentPieces} <span className="italic text-gold">{t.recentEm}</span>
+                {t.recentPieces}{" "}
+                <span className="italic text-gold">{t.recentEm}</span>
               </h2>
             </div>
             <Link

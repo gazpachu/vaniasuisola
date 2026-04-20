@@ -14,9 +14,6 @@ export default defineConfig({
   },
   build: {
     outDir: "docs",
-    rollupOptions: {
-      external: [],
-    },
     copyPublicDir: true,
   },
   publicDir: "public",
