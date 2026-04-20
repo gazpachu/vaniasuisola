@@ -30,8 +30,8 @@ type Dict = {
     recentEm: string;
     allWork: string;
     viewAll: string;
-    porcelain: string;
-    stoneware: string;
+    earthenware: string;
+    earthenware2: string;
     recogSelected: string;
     recogTrained: string;
     recogOrigin: string;
@@ -95,7 +95,7 @@ type Dict = {
     metaTitle: string;
     metaDesc: string;
     ogDesc: string;
-    materials: { porcelain: string; stoneware: string };
+    materials: { earthenware: string; earthenware2: string };
   };
 
   // Contact
@@ -155,7 +155,7 @@ export const translations: Record<Locale, Dict> = {
       h1b: "breathe",
       h1c: "in clay.",
       intro:
-        "— hand-built porcelain and stoneware that traces the quiet architecture of growth, gesture and void.",
+        "— hand-built earthenware that traces the quiet architecture of growth, gesture and void.",
       introName: "The sculptural work of",
       cta1: "View the work",
       cta2: "About the artist",
@@ -170,8 +170,8 @@ export const translations: Record<Locale, Dict> = {
       recentEm: "pieces",
       allWork: "All work →",
       viewAll: "View all work →",
-      porcelain: "Porcelain · 2024",
-      stoneware: "Stoneware · 2024",
+      earthenware: "Earthenware · 2024",
+      earthenware2: "Earthenware · 2024",
       recogSelected: "Selected",
       recogTrained: "Trained",
       recogOrigin: "Origin",
@@ -182,7 +182,7 @@ export const translations: Record<Locale, Dict> = {
       workingSpain: "working in Spain",
       metaTitle: "Vania Suisola — Ceramic Sculpture",
       metaDesc:
-        "Hand-built ceramic sculpture by Vania Suisola. Organic forms in porcelain and stoneware, made between Florence and Alicante.",
+        "Hand-built ceramic sculpture by Vania Suisola. Organic forms in earthenware, made between Florence and Alicante.",
       ogDesc:
         "Selected for the Bienal Internacional de Cerámica de Manises. Portfolio of organic, hand-built ceramic forms.",
     },
@@ -197,7 +197,7 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", where she has lived and worked for many years.",
       p1: "Her practice grew from an early love of drawing and material — the same instinct that, years later, led her to formal training in artistic ceramics at",
       easda: "EASDA",
-      p2: "From a single sheet of clay, she folds, joins and pierces structures that feel grown rather than made: shells, ribcages, cells, all the soft architecture of living things. Each work is built entirely by hand, fired slowly, and finished in matte porcelain whites that absorb the light.",
+      p2: "From a single sheet of clay, she folds, joins and pierces structures that feel grown rather than made: shells, ribcages, cells, all the soft architecture of living things. Each work is built entirely by hand, fired slowly, and finished in matte earthenware whites that absorb the light.",
       p3a: "Her most recent piece was selected for the",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — one of the most respected ceramic platforms in Spain.",
@@ -222,7 +222,7 @@ export const translations: Record<Locale, Dict> = {
           year: "2020",
           title: "Studio in Alicante",
           place: "Spain",
-          note: "Independent studio practice in porcelain and stoneware.",
+          note: "Independent studio practice in earthenware.",
         },
         {
           year: "—",
@@ -232,7 +232,7 @@ export const translations: Record<Locale, Dict> = {
         },
       ],
       materialsEyebrow: "Materials",
-      materialsA: "Porcelain, stoneware,",
+      materialsA: "Earthenware,",
       materialsB: "and patience.",
       materialsBody:
         "Vania works with high-firing clay bodies that allow walls to be pulled thin without losing structure. The matte white finish is never glaze for its own sake — it serves the form, the shadow and the void.",
@@ -254,7 +254,7 @@ export const translations: Record<Locale, Dict> = {
       h1a: "The collection of",
       h1b: " hollow forms.",
       intro:
-        "A growing series of hand-built porcelain and stoneware sculptures. Each work is one of a kind, built without moulds and finished in matte unglazed white.",
+        "A growing series of hand-built earthenware sculptures. Each work is one of a kind, built without moulds and finished in matte unglazed white.",
       items: [
         { note: "Selected — Bienal Internacional de Cerámica, Manises 2024." },
         { note: "Single-sheet construction, fired twice." },
@@ -271,7 +271,7 @@ export const translations: Record<Locale, Dict> = {
         "Selected ceramic sculptures by Vania Suisola — hand-built porcelain and stoneware works, including the piece selected for the Bienal Internacional de Manises.",
       ogDesc:
         "Selected ceramic sculptures, 2023–2024. Porcelain and stoneware, hand-built.",
-      materials: { porcelain: "Porcelain", stoneware: "Stoneware" },
+      materials: { earthenware: "Earthenware", earthenware2: "Earthenware" },
     },
     contact: {
       eyebrow: "Get in touch",
@@ -311,7 +311,7 @@ export const translations: Record<Locale, Dict> = {
       instagram: "Instagram ↗",
       getInTouch: "Get in touch ↗",
       rights: "© {year} Vania Suisola",
-      worksIn: "All works in porcelain & stoneware",
+      worksIn: "All works in earthenware",
     },
     notFound: {
       eyebrow: "Lost in the studio",
@@ -331,7 +331,7 @@ export const translations: Record<Locale, Dict> = {
       h1b: "respiran",
       h1c: "en arcilla.",
       intro:
-        "— porcelana y gres modelados a mano que trazan la arquitectura silenciosa del crecimiento, el gesto y el vacío.",
+        "— loza modelada a mano que traza la arquitectura silenciosa del crecimiento, el gesto y el vacío.",
       introName: "La obra escultórica de",
       cta1: "Ver la obra",
       cta2: "Sobre la artista",
@@ -346,8 +346,8 @@ export const translations: Record<Locale, Dict> = {
       recentEm: "recientes",
       allWork: "Toda la obra →",
       viewAll: "Ver toda la obra →",
-      porcelain: "Porcelana · 2024",
-      stoneware: "Gres · 2024",
+      earthenware: "Loza · 2024",
+      earthenware2: "Loza · 2024",
       recogSelected: "Seleccionada",
       recogTrained: "Formación",
       recogOrigin: "Origen",
@@ -358,7 +358,7 @@ export const translations: Record<Locale, Dict> = {
       workingSpain: "trabajando en España",
       metaTitle: "Vania Suisola — Escultura Cerámica",
       metaDesc:
-        "Escultura cerámica modelada a mano por Vania Suisola. Formas orgánicas en porcelana y gres, entre Florencia y Alicante.",
+        "Escultura cerámica modelada a mano por Vania Suisola. Formas orgánicas en loza, entre Florencia y Alicante.",
       ogDesc:
         "Seleccionada para la Bienal Internacional de Cerámica de Manises. Portfolio de formas cerámicas orgánicas hechas a mano.",
     },
@@ -373,7 +373,7 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", donde vive y trabaja desde hace muchos años.",
       p1: "Su práctica nació de un temprano amor por el dibujo y la materia — el mismo instinto que, años más tarde, la llevó a la formación oficial en cerámica artística en",
       easda: "EASDA",
-      p2: "A partir de una única lámina de arcilla, pliega, une y perfora estructuras que parecen crecidas más que hechas: caparazones, costillares, células, toda la arquitectura blanda de lo vivo. Cada obra está construida íntegramente a mano, cocida lentamente y acabada en blancos mate de porcelana que absorben la luz.",
+      p2: "A partir de una única lámina de arcilla, pliega, une y perfora estructuras que parecen crecidas más que hechas: caparazones, costillares, células, toda la arquitectura blanda de lo vivo. Cada obra está construida íntegramente a mano, cocida lentamente y acabada en blancos mate de loza que absorben la luz.",
       p3a: "Su pieza más reciente fue seleccionada para la",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — una de las plataformas cerámicas más respetadas de España.",
@@ -398,7 +398,7 @@ export const translations: Record<Locale, Dict> = {
           year: "2020",
           title: "Estudio en Alicante",
           place: "España",
-          note: "Práctica independiente en porcelana y gres.",
+          note: "Práctica independiente en loza.",
         },
         {
           year: "—",
@@ -408,7 +408,7 @@ export const translations: Record<Locale, Dict> = {
         },
       ],
       materialsEyebrow: "Materiales",
-      materialsA: "Porcelana, gres,",
+      materialsA: "Loza,",
       materialsB: "y paciencia.",
       materialsBody:
         "Vania trabaja con pastas de alta temperatura que permiten estirar los muros hasta su límite sin perder estructura. El acabado mate blanco no es esmalte por sí mismo — sirve a la forma, a la sombra y al vacío.",
@@ -430,7 +430,7 @@ export const translations: Record<Locale, Dict> = {
       h1a: "La colección de",
       h1b: " formas huecas.",
       intro:
-        "Una serie creciente de esculturas en porcelana y gres modeladas a mano. Cada obra es única, construida sin moldes y acabada en blanco mate sin esmaltar.",
+        "Una serie creciente de esculturas en loza modeladas a mano. Cada obra es única, construida sin moldes y acabada en blanco mate sin esmaltar.",
       items: [
         {
           note: "Seleccionada — Bienal Internacional de Cerámica, Manises 2024.",
@@ -448,10 +448,10 @@ export const translations: Record<Locale, Dict> = {
       enquire: "Consultar →",
       metaTitle: "Obra — Vania Suisola",
       metaDesc:
-        "Esculturas cerámicas seleccionadas de Vania Suisola — porcelana y gres modelados a mano, incluida la pieza seleccionada para la Bienal Internacional de Manises.",
+        "Esculturas cerámicas seleccionadas de Vania Suisola — loza modelada a mano, incluida la pieza seleccionada para la Bienal Internacional de Manises.",
       ogDesc:
-        "Esculturas cerámicas seleccionadas, 2023–2024. Porcelana y gres, hechas a mano.",
-      materials: { porcelain: "Porcelana", stoneware: "Gres" },
+        "Esculturas cerámicas seleccionadas, 2023–2024. Loza, hechas a mano.",
+      materials: { earthenware: "Loza", earthenware2: "Loza" },
     },
     contact: {
       eyebrow: "Contacto",
@@ -491,7 +491,7 @@ export const translations: Record<Locale, Dict> = {
       instagram: "Instagram ↗",
       getInTouch: "Contactar ↗",
       rights: "© {year} Vania Suisola",
-      worksIn: "Todas las obras en porcelana y gres",
+      worksIn: "Todas las obras en loza",
     },
     notFound: {
       eyebrow: "Perdido en el estudio",
@@ -511,7 +511,7 @@ export const translations: Record<Locale, Dict> = {
       h1b: "respirano",
       h1c: "nell'argilla.",
       intro:
-        "— porcellana e grès modellati a mano che tracciano l'architettura silenziosa della crescita, del gesto e del vuoto.",
+        "— terracotta modellata a mano che traccia l'architettura silenziosa della crescita, del gesto e del vuoto.",
       introName: "L'opera scultorea di",
       cta1: "Vedi le opere",
       cta2: "Sull'artista",
@@ -526,8 +526,8 @@ export const translations: Record<Locale, Dict> = {
       recentEm: "recenti",
       allWork: "Tutte le opere →",
       viewAll: "Vedi tutte le opere →",
-      porcelain: "Porcellana · 2024",
-      stoneware: "Grès · 2024",
+      earthenware: "Terracotta · 2024",
+      earthenware2: "Terracotta · 2024",
       recogSelected: "Selezionata",
       recogTrained: "Formazione",
       recogOrigin: "Origine",
@@ -538,7 +538,7 @@ export const translations: Record<Locale, Dict> = {
       workingSpain: "lavora in Spagna",
       metaTitle: "Vania Suisola — Scultura Ceramica",
       metaDesc:
-        "Sculture ceramiche modellate a mano da Vania Suisola. Forme organiche in porcellana e grès, tra Firenze e Alicante.",
+        "Sculture ceramiche modellate a mano da Vania Suisola. Forme organiche in terracotta, tra Firenze e Alicante.",
       ogDesc:
         "Selezionata per la Bienal Internacional de Cerámica de Manises. Portfolio di forme ceramiche organiche fatte a mano.",
     },
@@ -553,7 +553,7 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", dove vive e lavora da molti anni.",
       p1: "La sua pratica nasce da un precoce amore per il disegno e la materia — lo stesso istinto che, anni dopo, l'ha portata alla formazione ufficiale in ceramica artistica all'",
       easda: "EASDA",
-      p2: "A partire da un unico foglio di argilla, piega, unisce e fora strutture che sembrano cresciute più che costruite: gusci, gabbie toraciche, cellule, tutta l'architettura morbida del vivente. Ogni opera è interamente modellata a mano, cotta lentamente e rifinita in bianchi opachi di porcellana che assorbono la luce.",
+      p2: "A partire da un unico foglio di argilla, piega, unisce e fora strutture che sembrano cresciute più che costruite: gusci, gabbie toraciche, cellule, tutta l'architettura morbida del vivente. Ogni opera è interamente modellata a mano, cotta lentamente e rifinita in bianchi opachi di terracotta che assorbono la luce.",
       p3a: "Il suo pezzo più recente è stato selezionato per la",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — una delle piattaforme ceramiche più rispettate in Spagna.",
@@ -578,7 +578,7 @@ export const translations: Record<Locale, Dict> = {
           year: "2020",
           title: "Studio ad Alicante",
           place: "Spagna",
-          note: "Pratica indipendente in porcellana e grès.",
+          note: "Pratica indipendente in terracotta.",
         },
         {
           year: "—",
@@ -588,7 +588,7 @@ export const translations: Record<Locale, Dict> = {
         },
       ],
       materialsEyebrow: "Materiali",
-      materialsA: "Porcellana, grès,",
+      materialsA: "Terracotta,",
       materialsB: "e pazienza.",
       materialsBody:
         "Vania lavora con paste ad alta cottura che permettono pareti tirate sottili senza perdere struttura. La finitura bianca opaca non è smalto fine a sé stesso — serve la forma, l'ombra e il vuoto.",
@@ -610,7 +610,7 @@ export const translations: Record<Locale, Dict> = {
       h1a: "La collezione delle",
       h1b: " forme cave.",
       intro:
-        "Una serie crescente di sculture in porcellana e grès modellate a mano. Ogni opera è unica, costruita senza stampi e rifinita in bianco opaco non smaltato.",
+        "Una serie crescente di sculture in terracotta modellate a mano. Ogni opera è unica, costruita senza stampi e rifinita in bianco opaco non smaltato.",
       items: [
         {
           note: "Selezionata — Bienal Internacional de Cerámica, Manises 2024.",
@@ -626,10 +626,10 @@ export const translations: Record<Locale, Dict> = {
       enquire: "Richiedi →",
       metaTitle: "Opere — Vania Suisola",
       metaDesc:
-        "Sculture ceramiche selezionate di Vania Suisola — porcellana e grès modellati a mano, inclusa l'opera selezionata per la Bienal Internacional de Manises.",
+        "Sculture ceramiche selezionate di Vania Suisola — terracotta modellata a mano, inclusa l'opera selezionata per la Bienal Internacional de Manises.",
       ogDesc:
-        "Sculture ceramiche selezionate, 2023–2024. Porcellana e grès, fatte a mano.",
-      materials: { porcelain: "Porcellana", stoneware: "Grès" },
+        "Sculture ceramiche selezionate, 2023–2024. Terracotta, fatte a mano.",
+      materials: { earthenware: "Terracotta", earthenware2: "Terracotta" },
     },
     contact: {
       eyebrow: "Contatti",
@@ -671,7 +671,7 @@ export const translations: Record<Locale, Dict> = {
       instagram: "Instagram ↗",
       getInTouch: "Contatta ↗",
       rights: "© {year} Vania Suisola",
-      worksIn: "Tutte le opere in porcellana e grès",
+      worksIn: "Tutte le opere in terracotta",
     },
     notFound: {
       eyebrow: "Perso nello studio",

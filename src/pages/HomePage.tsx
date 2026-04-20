@@ -112,7 +112,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                     Respiro I
                   </p>
                   <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
-                    {t.porcelain}
+                    {t.earthenware}
                   </p>
                 </div>
                 <span className="text-gold/60 text-sm">01</span>
@@ -134,7 +134,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                       Cavità
                     </p>
                     <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
-                      {t.stoneware}
+                      {t.earthenware2}
                     </p>
                   </div>
                   <span className="text-gold/60 text-sm">02</span>
@@ -155,7 +155,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                       Soglia (detail)
                     </p>
                     <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
-                      {t.porcelain}
+                      {t.earthenware}
                     </p>
                   </div>
                   <span className="text-gold/60 text-sm">03</span>
