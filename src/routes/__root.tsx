@@ -1,4 +1,10 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+} from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 import { SiteHeader } from "../components/SiteHeader";
@@ -44,17 +50,39 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Vania Suisola — Ceramic Sculpture" },
       { name: "twitter:title", content: "Vania Suisola — Ceramic Sculpture" },
-      { name: "description", content: "A ceramic artist's online portfolio showcasing her artistic journey and creations." },
-      { property: "og:description", content: "A ceramic artist's online portfolio showcasing her artistic journey and creations." },
-      { name: "twitter:description", content: "A ceramic artist's online portfolio showcasing her artistic journey and creations." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/35d8eea3-b2ae-4276-b088-43d4787fda27/id-preview-eed3a29a--ee3e6151-a443-40a6-9fad-8dcb52cc5a73.lovable.app-1776578260362.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/35d8eea3-b2ae-4276-b088-43d4787fda27/id-preview-eed3a29a--ee3e6151-a443-40a6-9fad-8dcb52cc5a73.lovable.app-1776578260362.png" },
+      {
+        name: "description",
+        content:
+          "A ceramic artist's online portfolio showcasing her artistic journey and creations.",
+      },
+      {
+        property: "og:description",
+        content:
+          "A ceramic artist's online portfolio showcasing her artistic journey and creations.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A ceramic artist's online portfolio showcasing her artistic journey and creations.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/35d8eea3-b2ae-4276-b088-43d4787fda27/id-preview-eed3a29a--ee3e6151-a443-40a6-9fad-8dcb52cc5a73.lovable.app-1776578260362.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/35d8eea3-b2ae-4276-b088-43d4787fda27/id-preview-eed3a29a--ee3e6151-a443-40a6-9fad-8dcb52cc5a73.lovable.app-1776578260362.png",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
   }),
   shellComponent: RootShell,

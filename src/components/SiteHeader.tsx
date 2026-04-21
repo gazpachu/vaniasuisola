@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useLocale, localizedPath } from "@/i18n/useLocale";
 import { LOCALES, type Locale } from "@/i18n/translations";
+import logo from "@/assets/logo.jpeg";
 
 export function SiteHeader() {
   const { locale, t, basePath } = useLocale();
@@ -35,15 +36,24 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-10 md:py-6">
         <Link
           to={localizedPath(locale, "/")}
-          className="group flex flex-col leading-none"
+          className="group flex items-center gap-3 leading-none"
           onClick={() => setOpen(false)}
         >
-          <span className="text-display text-xl md:text-2xl text-bone">
-            Vania <span className="italic text-gold">Suisola</span>
-          </span>
-          <span className="text-[0.6rem] tracking-[0.32em] uppercase text-muted-foreground mt-1">
-            {t.tagline}
-          </span>
+          <div className="h-10 w-10 md:h-11 md:w-11 rounded-full overflow-hidden border border-gold/40 shrink-0 transition-all duration-500 ease-out group-hover:border-gold group-hover:shadow-[0_0_18px_rgba(201,168,76,0.45)] group-hover:scale-110">
+            <img
+              src={logo}
+              alt="Vania Suisola"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:rotate-[8deg] group-hover:scale-110"
+            />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="text-display text-xl md:text-2xl text-bone">
+              Vania <span className="italic text-gold">Suisola</span>
+            </span>
+            <span className="text-[0.6rem] tracking-[0.32em] uppercase text-muted-foreground mt-1">
+              {t.tagline}
+            </span>
+          </div>
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
