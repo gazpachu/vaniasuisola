@@ -40,7 +40,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <p className="text-eyebrow">{t.elsewhere}</p>
             <div className="hairline w-12 mt-3 mb-5" />
             <a
-              href="https://www.instagram.com/vania.suisola"
+              href="https://www.instagram.com/ceramicadivaniasuisola"
               target="_blank"
               rel="noreferrer"
               className="text-display text-2xl text-bone hover:text-gold transition-colors"
