@@ -33,7 +33,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col md:items-end gap-3 text-sm">
           <a
-            href="https://www.instagram.com/vania.suisola"
+            href="https://www.instagram.com/ceramicadivaniasuisola"
             target="_blank"
             rel="noreferrer"
             className="text-muted-foreground hover:text-gold transition-colors tracking-wider"
