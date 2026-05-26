@@ -383,7 +383,7 @@ export const translations: Record<Locale, Dict> = {
       milestonesB: "seleccionados",
       timeline: [
         {
-          year: "2024",
+          year: "2026",
           title: "Bienal Internacional de Cerámica de Manises",
           place: "Valencia, España",
           note: "Obra escultórica reciente seleccionada para la bienal internacional.",
@@ -563,7 +563,7 @@ export const translations: Record<Locale, Dict> = {
       milestonesB: "selezionate",
       timeline: [
         {
-          year: "2024",
+          year: "2026",
           title: "Bienal Internacional de Cerámica de Manises",
           place: "Valencia, Spagna",
           note: "Opera scultorea recente selezionata per la biennale internazionale.",
