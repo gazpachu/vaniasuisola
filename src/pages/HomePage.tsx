@@ -1,19 +1,31 @@
 import { Link } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
 import heroImg from "@/assets/sculpture-hero.jpeg";
-import img2 from "@/assets/sculpture-2.jpeg";
-import img3 from "@/assets/sculpture-3.jpeg";
-import detailImg from "@/assets/sculpture-detail.jpeg";
+import imgSuspension1 from "@/assets/suspension-del-instante1.jpg";
+import imgSuspension2 from "@/assets/suspension-del-instante2.jpg";
+import imgSuspension3 from "@/assets/suspension-del-instante3.jpg";
 import type { Locale } from "@/i18n/translations";
 import { t as translate } from "@/i18n/translations";
 import { localizedPath } from "@/i18n/useLocale";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = translate(locale).home;
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!lightboxImg) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxImg(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxImg]);
+
   return (
     <>
       {/* HERO */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 cursor-zoom-in" onClick={() => setLightboxImg(heroImg)}>
           <img
             src={heroImg}
             alt="Organic white ceramic sculpture by Vania Suisola"
@@ -23,8 +35,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-6 md:px-10 pb-20 md:pb-32 pt-40">
-          <div className="max-w-3xl animate-fade-up">
+        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-6 md:px-10 pb-20 md:pb-32 pt-40 pointer-events-none">
+          <div className="max-w-3xl animate-fade-up pointer-events-auto">
             <p className="text-eyebrow mb-8">{t.eyebrow}</p>
             <h1 className="text-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-bone leading-[0.9]">
               {t.h1a}
@@ -52,7 +64,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="absolute right-6 md:right-10 bottom-10 z-10 hidden md:flex flex-col items-end gap-2 animate-fade-in">
+        <div className="absolute right-6 md:right-10 bottom-10 z-10 hidden md:flex flex-col items-end gap-2 animate-fade-in pointer-events-auto">
           <div className="hairline w-24" />
           <p className="text-[0.65rem] tracking-[0.32em] uppercase text-muted-foreground">
             {t.cornerNote}
@@ -99,18 +111,21 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid gap-6 md:gap-10 md:grid-cols-12">
-            <figure className="md:col-span-7 group overflow-hidden bg-card">
+            <figure 
+              className="md:col-span-7 group overflow-hidden bg-card cursor-zoom-in"
+              onClick={() => setLightboxImg(imgSuspension1)}
+            >
               <div className="overflow-hidden aspect-[4/5]">
                 <img
-                  src={img2}
-                  alt="Ceramic sculpture — Respiro series"
+                  src={imgSuspension1}
+                  alt="Ceramic sculpture — Suspension del instante series"
                   className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                 />
               </div>
               <figcaption className="p-6 md:p-8 flex justify-between items-end">
                 <div>
                   <p className="text-display text-2xl md:text-3xl text-bone italic">
-                    Respiro I
+                    {t.featuredTitle1}
                   </p>
                   <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
                     {t.earthenware}
@@ -121,18 +136,21 @@ export function HomePage({ locale }: { locale: Locale }) {
             </figure>
 
             <div className="md:col-span-5 flex flex-col gap-6 md:gap-10">
-              <figure className="group overflow-hidden bg-card flex-1">
+              <figure 
+                className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
+                onClick={() => setLightboxImg(imgSuspension2)}
+              >
                 <div className="overflow-hidden aspect-[4/5]">
                   <img
-                    src={img3}
-                    alt="Ceramic sculpture detail — Cavità"
+                    src={imgSuspension2}
+                    alt="Ceramic sculpture detail — Suspension del instante detail"
                     className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                   />
                 </div>
                 <figcaption className="p-6 flex justify-between items-end">
                   <div>
                     <p className="text-display text-xl md:text-2xl text-bone italic">
-                      Cavità
+                      {t.featuredTitle2}
                     </p>
                     <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
                       {t.earthenware2}
@@ -142,18 +160,21 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </figcaption>
               </figure>
 
-              <figure className="group overflow-hidden bg-card flex-1">
+              <figure 
+                className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
+                onClick={() => setLightboxImg(imgSuspension3)}
+              >
                 <div className="overflow-hidden aspect-[4/5]">
                   <img
-                    src={detailImg}
-                    alt="Ceramic sculpture close-up — Soglia detail"
+                    src={imgSuspension3}
+                    alt="Ceramic sculpture close-up — Suspension del instante profile"
                     className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                   />
                 </div>
                 <figcaption className="p-6 flex justify-between items-end">
                   <div>
                     <p className="text-display text-xl md:text-2xl text-bone italic">
-                      Soglia (detail)
+                      {t.featuredTitle3}
                     </p>
                     <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
                       {t.earthenware}
@@ -205,6 +226,29 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
+      {lightboxImg && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center cursor-zoom-out animate-fade-in"
+          onClick={() => setLightboxImg(null)}
+        >
+          <button
+            className="absolute top-6 right-6 text-bone/60 hover:text-bone text-2xl transition-colors p-2"
+            onClick={() => setLightboxImg(null)}
+            aria-label="Close lightbox"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <img
+            src={lightboxImg}
+            alt="Original view"
+            className="max-h-[90vh] max-w-[95vw] object-contain select-none cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }
