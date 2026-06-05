@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build && cp docs/index.html docs/404.html",
+    "build": "vite build && node scripts/prerender.mjs",
     "dev": "vite dev",
     "preview": "vite preview",
+    "serve:docs": "node scripts/serve-docs.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
