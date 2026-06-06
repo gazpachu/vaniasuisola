@@ -51,6 +51,9 @@ interface Artwork {
 function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [swiped, setSwiped] = useState(false);
 
   useEffect(() => {
     if (!lightboxImg) return;
@@ -73,12 +76,46 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
     setCurrentIdx((prev) => (prev - 1 + w.images.length) % w.images.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setSwiped(false);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (distance > minSwipeDistance) {
+      setCurrentIdx((prev) => (prev + 1) % w.images.length);
+      setSwiped(true);
+    } else if (distance < -minSwipeDistance) {
+      setCurrentIdx((prev) => (prev - 1 + w.images.length) % w.images.length);
+      setSwiped(true);
+    }
+  };
+
+  const handleCardClick = () => {
+    if (swiped) {
+      setSwiped(false);
+      return;
+    }
+    setLightboxImg(w.images[currentIdx]);
+  };
+
   return (
     <>
       <figure className={`group/card ${w.span} bg-card overflow-hidden flex flex-col`}>
         <div 
           className={`relative overflow-hidden ${w.aspect} select-none cursor-zoom-in`}
-          onClick={() => setLightboxImg(w.images[currentIdx])}
+          onClick={handleCardClick}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {/* Images slider */}
           {w.images.map((imgSrc, imgI) => (
@@ -98,7 +135,7 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
               <button
                 onClick={prevImage}
                 aria-label="Previous image"
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-bone/20 bg-background/40 hover:bg-background/80 hover:border-gold text-bone flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-auto"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-bone/20 bg-background/40 hover:bg-background/80 hover:border-gold text-bone flex items-center justify-center opacity-100 md:opacity-0 md:group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-auto"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -107,7 +144,7 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
               <button
                 onClick={nextImage}
                 aria-label="Next image"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-bone/20 bg-background/40 hover:bg-background/80 hover:border-gold text-bone flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-auto"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full border border-bone/20 bg-background/40 hover:bg-background/80 hover:border-gold text-bone flex items-center justify-center opacity-100 md:opacity-0 md:group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-auto"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -115,7 +152,7 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
               </button>
 
               {/* Indicator dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 opacity-100 md:opacity-0 md:group-hover/card:opacity-100 transition-opacity duration-300">
                 {w.images.map((_, imgI) => (
                   <button
                     key={imgI}
