@@ -33,6 +33,11 @@ import imgSuspension3 from "@/assets/suspension-del-instante3.jpg";
 import imgSuspension4 from "@/assets/suspension-del-instante4.jpg";
 import imgSuspension5 from "@/assets/suspension-del-instante5.jpg";
 
+import imgSoglia1 from "@/assets/soglia-1.jpg";
+import imgSoglia2 from "@/assets/soglia-2.jpg";
+import imgSoglia3 from "@/assets/soglia-3.jpg";
+import imgSoglia4 from "@/assets/soglia-4.jpg";
+
 import type { Locale } from "@/i18n/translations";
 import { t as translate } from "@/i18n/translations";
 import { localizedPath } from "@/i18n/useLocale";
@@ -284,6 +289,16 @@ export function WorkPage({ locale }: { locale: Locale }) {
       images: [imgSuspension1, imgSuspension2, imgSuspension3, imgSuspension4, imgSuspension5],
       span: "md:col-span-12",
       aspect: "aspect-[16/9]",
+    },
+    {
+      n: "07",
+      title: "Soglia",
+      year: "2026",
+      material: t.materials.whiteEarthenware,
+      size: "48.5 × 19.5 × 18 cm",
+      images: [imgSoglia1, imgSoglia2, imgSoglia3, imgSoglia4],
+      span: "md:col-span-8",
+      aspect: "aspect-[3/4]",
     },
   ];
 

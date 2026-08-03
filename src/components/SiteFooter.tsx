@@ -52,7 +52,7 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex flex-col md:flex-row justify-between gap-2 text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground">
           <span>
-            {f.rights.replace("{year}", String(new Date().getFullYear()))}
+            {f.rights.replace("{year}", String(new Date().getFullYear()))} · Made by <a href="https://joanmira.com" target="_blank" className="hover:text-gold transition-colors">Joan Mira Studio</a>
           </span>
           <span>{f.worksIn}</span>
         </div>

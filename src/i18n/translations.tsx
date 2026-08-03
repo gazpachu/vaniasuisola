@@ -98,7 +98,7 @@ type Dict = {
     metaTitle: string;
     metaDesc: string;
     ogDesc: string;
-    materials: { earthenware: string; earthenware2: string };
+    materials: { earthenware: string; earthenware2: string; whiteEarthenware: string };
   };
 
   // Contact
@@ -167,17 +167,17 @@ export const translations: Record<Locale, Dict> = {
       statementA: "I work the clay until it forgets it was ever flat —",
       statementB: " until it learns to hold its own breath.",
       statementBody:
-        "Each piece begins as a single sheet and is folded, pierced and joined by hand. The void is as deliberate as the wall: light passes through, shadows gather inside, and the form acquires the rhythm of something living.",
+        "Each piece begins from a block from which clay is extracted, or from plates that are folded, perforated, and joined by hand. The void is as deliberate as the wall: light passes through, shadows gather inside, and the form acquires the rhythm of something living.",
       selectedWorks: "Selected works",
       recentPieces: "Recent",
       recentEm: "pieces",
       allWork: "All work →",
       viewAll: "View all work →",
-      earthenware: "Earthenware · 2026",
-      earthenware2: "Earthenware · 2026",
-      featuredTitle1: "Suspension of the Instant",
-      featuredTitle2: "Suspension of the Instant (detail)",
-      featuredTitle3: "Suspension of the Instant (view)",
+      earthenware: "White earthenware, hand-built · 2026",
+      earthenware2: "White earthenware, hand-built · 2026",
+      featuredTitle1: "Soglia",
+      featuredTitle2: "Soglia (detail)",
+      featuredTitle3: "Soglia (view)",
       recogSelected: "Selected",
       recogTrained: "Trained",
       recogOrigin: "Origin",
@@ -203,15 +203,21 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", where she has lived and worked for many years.",
       p1: "Her practice grew from an early love of drawing and material — the same instinct that, years later, led her to formal training in artistic ceramics at",
       easda: "EASDA",
-      p2: "From a single sheet of clay, she folds, joins and pierces structures that feel grown rather than made: shells, ribcages, cells, all the soft architecture of living things. Each work is built entirely by hand, fired slowly, and finished in matte earthenware whites that absorb the light.",
-      p3a: "Her most recent piece was selected for the",
+      p2: "Starting from a block of clay or using slabs, she models, folds, joins, and pierces structures that feel grown rather than built: shells, ribcages, and cells, all the soft architecture of living things. Each work is built entirely by hand, finished through meticulous manual work that gives the surface a matte and velvety finish capable of absorbing light, and fired slowly.",
+      p3a: "Her piece, Metamorfosis, was selected for the",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — one of the most respected ceramic platforms in Spain.",
-      studioCaption: "In studio, Alicante",
+      studioCaption: "Metamorphosis",
       trajectoryEyebrow: "Trajectory",
       milestonesA: "Selected",
       milestonesB: "milestones",
       timeline: [
+        {
+          year: "2026",
+          title: "Winner — Concurso de Pieza Única",
+          place: "Navarrete, La Rioja, Spain",
+          note: "Awarded first prize for her sculptural piece 'Metamorphosis'.",
+        },
         {
           year: "2026",
           title: "Bienal Internacional de Cerámica de Manises",
@@ -241,12 +247,12 @@ export const translations: Record<Locale, Dict> = {
       materialsA: "Earthenware,",
       materialsB: "and patience.",
       materialsBody:
-        "Vania works with high-firing clay bodies that allow walls to be pulled thin without losing structure. The matte white finish is never glaze for its own sake — it serves the form, the shadow and the void.",
+        "Vania works with low- and high-temperature pastes that allow her to stretch the walls to their limit without losing structure. The matte white finish is not enamel in itself—it serves the form, the shadow, and the void.",
       processEyebrow: "Process",
       processA: "Hand-built,",
       processB: "slowly.",
       processBody:
-        "No moulds, no wheel. Each piece begins with a flat sheet that is coaxed into volume over days, dried under cloth, then fired twice. The openings are never decorative — they are how the sculpture breathes.",
+        "No molds, no lathe. Each piece begins with a flat block or sheet that is shaped over several days, dried under a cloth, and fired. The openings are not decorative—they are where the sculpture breathes.",
       seeWork: "See the work →",
       getInTouch: "Get in touch",
       metaTitle: "About — Vania Suisola",
@@ -262,12 +268,13 @@ export const translations: Record<Locale, Dict> = {
       intro:
         "A growing series of hand-built earthenware sculptures. Each work is one of a kind, built without moulds and finished in matte unglazed white.",
       items: [
-        { note: "Selected — Bienal Internacional de Cerámica, Manises 2026." },
+        { note: "Winner of the 2026 Concurso de Pieza Única in Navarrete, La Rioja, Spain." },
         { note: "A study in continuity and organic flow, eliminating boundaries between interior and exterior." },
         { note: "Capturing the organic rhythm and tide-like movement of clay." },
         { note: "A quiet capture of momentum and suspended movement. Selected — International Biennial of Ceramic Art, Marratxí 2025." },
         { note: "Hydrodynamic tension and speed translated into sinuous ceramic planes." },
         { note: "A horizontal exploration of suspended time and physical weightlessness. Selected — Bienal Internacional de Cerámica, Manises 2026." },
+        { note: "Soglia—Italian for threshold — navigates the delicate space between isolation and intimacy. Hand-built from white earthenware, its looping openings and interconnected curves treat emptiness not as a void, but as a place for contact.\n\nAs traditional support systems and close communities fray, Suisola uses the humble, everyday nature of clay to suggest that belonging isn't a permanent state. Instead, it is an active, ongoing effort—built slowly through care, presence, and the willingness to bridge the gaps between us." },
       ],
       ctaEyebrow: "Acquisitions & commissions",
       ctaA: "Available works and commissioned pieces",
@@ -278,7 +285,7 @@ export const translations: Record<Locale, Dict> = {
         "Selected ceramic sculptures by Vania Suisola — hand-built porcelain and stoneware works, including the piece selected for the Bienal Internacional de Manises.",
       ogDesc:
         "Selected ceramic sculptures, 2023–2024. Porcelain and stoneware, hand-built.",
-      materials: { earthenware: "Earthenware", earthenware2: "Earthenware" },
+      materials: { earthenware: "Earthenware", earthenware2: "Earthenware", whiteEarthenware: "White earthenware, hand-built" },
     },
     contact: {
       eyebrow: "Get in touch",
@@ -347,17 +354,17 @@ export const translations: Record<Locale, Dict> = {
       statementA: "Trabajo la arcilla hasta que olvida que un día fue plana —",
       statementB: " hasta que aprende a contener su propio aliento.",
       statementBody:
-        "Cada pieza comienza como una sola lámina, plegada, perforada y unida a mano. El vacío es tan deliberado como el muro: la luz lo atraviesa, las sombras se recogen dentro, y la forma adquiere el ritmo de algo vivo.",
+        "Cada pieza comienza a partir de un bloque del que se va extrayendo la arcilla o de placas plegadas, perforadas y unidas a mano. El vacío es tan deliberado como el muro: la luz lo atraviesa, las sombras se recogen dentro, y la forma adquiere el ritmo de algo vivo.",
       selectedWorks: "Obra seleccionada",
       recentPieces: "Piezas",
       recentEm: "recientes",
       allWork: "Toda la obra →",
       viewAll: "Ver toda la obra →",
-      earthenware: "Loza · 2026",
-      earthenware2: "Loza · 2026",
-      featuredTitle1: "Suspensión del instante",
-      featuredTitle2: "Suspensión del instante (detalle)",
-      featuredTitle3: "Suspensión del instante (vista)",
+      earthenware: "Loza blanca, modelada a mano · 2026",
+      earthenware2: "Loza blanca, modelada a mano · 2026",
+      featuredTitle1: "Soglia",
+      featuredTitle2: "Soglia (detalle)",
+      featuredTitle3: "Soglia (vista)",
       recogSelected: "Seleccionada",
       recogTrained: "Formación",
       recogOrigin: "Origen",
@@ -383,15 +390,21 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", donde vive y trabaja desde hace muchos años.",
       p1: "Su práctica nació de un temprano amor por el dibujo y la materia — el mismo instinto que, años más tarde, la llevó a la formación oficial en cerámica artística en",
       easda: "EASDA",
-      p2: "A partir de una única lámina de arcilla, pliega, une y perfora estructuras que parecen crecidas más que hechas: caparazones, costillares, células, toda la arquitectura blanda de lo vivo. Cada obra está construida íntegramente a mano, cocida lentamente y acabada en blancos mate de loza que absorben la luz.",
-      p3a: "Su pieza más reciente fue seleccionada para la",
+      p2: "Partiendo de un bloque de arcilla o a través de laminas, modela, dobla, une y perfora estructuras que parecen haber crecido más que construido: conchas, cajas torácicas y células, toda la arquitectura blanda de los vivos. Cada obra está completamente modelada a mano, terminada mediante un trabajo manual cuidadoso que da a la superficie un acabado mate y aterciopelado, capaz de absorber la luz y que se hornea lentamente.",
+      p3a: "Su pieza, Metamorfosis, fue seleccionada para la",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — una de las plataformas cerámicas más respetadas de España.",
-      studioCaption: "En el estudio, Alicante",
+      studioCaption: "Metamorfosis",
       trajectoryEyebrow: "Trayectoria",
       milestonesA: "Hitos",
       milestonesB: "seleccionados",
       timeline: [
+        {
+          year: "2026",
+          title: "Ganadora — Concurso de la Pieza Única",
+          place: "Navarrete, La Rioja, España",
+          note: "Galardonada con el primer premio por su obra escultórica 'Metamorfosis'.",
+        },
         {
           year: "2026",
           title: "Bienal Internacional de Cerámica de Manises",
@@ -421,12 +434,11 @@ export const translations: Record<Locale, Dict> = {
       materialsA: "Loza,",
       materialsB: "y paciencia.",
       materialsBody:
-        "Vania trabaja con pastas de alta temperatura que permiten estirar los muros hasta su límite sin perder estructura. El acabado mate blanco no es esmalte por sí mismo — sirve a la forma, a la sombra y al vacío.",
+        "Vania trabaja con pastas de baja y alta temperatura que permiten estirar los muros hasta su límite sin perder estructura. El acabado mate blanco no es esmalte por sí mismo — sirve a la forma, a la sombra y al vacío.",
       processEyebrow: "Proceso",
       processA: "Modelado a mano,",
       processB: "con calma.",
-      processBody:
-        "Sin moldes, sin torno. Cada pieza empieza con una lámina plana que se lleva al volumen durante días, se seca bajo paño y se cuece dos veces. Las aberturas no son decorativas — son por donde respira la escultura.",
+      processBody: "Sin moldes, sin torno. Cada pieza empieza con bloque u láminas plana que se lleva al volumen durante días, se seca bajo paño y se cuece. Las aberturas no son decorativas — son por donde respira la escultura.",
       seeWork: "Ver la obra →",
       getInTouch: "Contactar",
       metaTitle: "Sobre — Vania Suisola",
@@ -443,13 +455,14 @@ export const translations: Record<Locale, Dict> = {
         "Una serie creciente de esculturas en loza modeladas a mano. Cada obra es única, construida sin moldes y acabada en blanco mate sin esmaltar.",
       items: [
         {
-          note: "Seleccionada — Bienal Internacional de Cerámica, Manises 2026.",
+          note: "Ganadora del Concurso de la Pieza Única 2026 en Navarrete, La Rioja, España.",
         },
         { note: "Un estudio sobre la continuidad y el flujo orgánico, eliminando las fronteras entre el interior y el exterior." },
         { note: "Capturando el ritmo orgánico y el movimiento de la arcilla como una marea." },
         { note: "Una captura silenciosa del impulso y del movimiento suspendido. Selección oficial en la Biennal Internacional de Cerámica de Marratxí 2025." },
         { note: "Tensión hidrodinámica y velocidad traducidas en planos cerámicos sinuosos." },
         { note: "Una exploración horizontal del tiempo suspendido y la ingravidez física. Selección oficial en la Bienal Internacional de Cerámica, Manises 2026." },
+        { note: "Soglia —del italiano 'umbral'— transita por el delicado espacio entre el aislamiento y la intimidad. Modelada a mano en loza blanca, sus aberturas en bucle y curvas interconectadas tratan el vacío no como una ausencia, sino como un lugar de encuentro.\n\nA medida que los sistemas tradicionales de apoyo y las comunidades cercanas se debilitan, Suisola utiliza la naturaleza humilde y cotidiana de la arcilla para sugerir que la pertenencia no es un estado permanente. Al contrario, es un esfuerzo activo y constante, construido lentamente a través del cuidado, la presencia y la voluntad de tender puentes sobre las distancias que nos separan." },
       ],
       ctaEyebrow: "Adquisiciones y encargos",
       ctaA: "Obras disponibles y piezas por encargo",
@@ -460,7 +473,7 @@ export const translations: Record<Locale, Dict> = {
         "Esculturas cerámicas seleccionadas de Vania Suisola — loza modelada a mano, incluida la pieza seleccionada para la Bienal Internacional de Manises.",
       ogDesc:
         "Esculturas cerámicas seleccionadas, 2023–2024. Loza, hechas a mano.",
-      materials: { earthenware: "Loza", earthenware2: "Loza" },
+      materials: { earthenware: "Loza", earthenware2: "Loza", whiteEarthenware: "Loza blanca, modelada a mano" },
     },
     contact: {
       eyebrow: "Contacto",
@@ -529,17 +542,17 @@ export const translations: Record<Locale, Dict> = {
       statementA: "Lavoro l'argilla finché dimentica di essere stata piatta —",
       statementB: " finché impara a trattenere il proprio respiro.",
       statementBody:
-        "Ogni pezzo nasce da un unico foglio piegato, forato e unito a mano. Il vuoto è deliberato quanto la parete: la luce lo attraversa, le ombre si raccolgono all'interno, e la forma acquisisce il ritmo di qualcosa di vivo.",
+        "Ogni pezzo nasce da un blocco da cui viene estratta l'argilla, oppure da lastre che vengono piegate, perforate e unite a mano. Il vuoto è deliberato quanto la parete: la luce lo attraversa, le ombre si raccolgono all'interno, e la forma acquisisce il ritmo di qualcosa di vivo.",
       selectedWorks: "Opere selezionate",
       recentPieces: "Pezzi",
       recentEm: "recenti",
       allWork: "Tutte le opere →",
       viewAll: "Vedi tutte le opere →",
-      earthenware: "Terracotta · 2026",
-      earthenware2: "Terracotta · 2026",
-      featuredTitle1: "Sospensione dell'istante",
-      featuredTitle2: "Sospensione dell'istante (dettaglio)",
-      featuredTitle3: "Sospensione dell'istante (vista)",
+      earthenware: "Terracotta bianca, modellata a mano · 2026",
+      earthenware2: "Terracotta bianca, modellata a mano · 2026",
+      featuredTitle1: "Soglia",
+      featuredTitle2: "Soglia (dettaglio)",
+      featuredTitle3: "Soglia (vista)",
       recogSelected: "Selezionata",
       recogTrained: "Formazione",
       recogOrigin: "Origine",
@@ -565,15 +578,21 @@ export const translations: Record<Locale, Dict> = {
       leadEnd: ", dove vive e lavora da molti anni.",
       p1: "La sua pratica nasce da un precoce amore per il disegno e la materia — lo stesso istinto che, anni dopo, l'ha portata alla formazione ufficiale in ceramica artistica all'",
       easda: "EASDA",
-      p2: "A partire da un unico foglio di argilla, piega, unisce e fora strutture che sembrano cresciute più che costruite: gusci, gabbie toraciche, cellule, tutta l'architettura morbida del vivente. Ogni opera è interamente modellata a mano, cotta lentamente e rifinita in bianchi opachi di terracotta che assorbono la luce.",
-      p3a: "Il suo pezzo più recente è stato selezionato per la",
+      p2: "A partire da un blocco di argilla o mediante placche, modella, piega, unisce e perfora strutture che sembrano cresciute più che costruite: gusci, gabbie toraciche e cellule, tutta l’architettura morbida del vivente. Ogni opera è interamente modellata a mano, rifinita attraverso un accurato lavoro manuale che conferisce alla superficie una finitura opaca e vellutata, capace di assorbire la luce e cotta lentamente.",
+      p3a: "Il suo pezzo, Metamorfosis, è stato selezionato per la",
       bienalAbout: " Bienal Internacional de Cerámica de Manises",
       p3b: ", Valencia — una delle piattaforme ceramiche più rispettate in Spagna.",
-      studioCaption: "In studio, Alicante",
+      studioCaption: "Metamorfosis",
       trajectoryEyebrow: "Percorso",
       milestonesA: "Tappe",
       milestonesB: "selezionate",
       timeline: [
+        {
+          year: "2026",
+          title: "Vincitrice — Concorso de Pieza Única",
+          place: "Navarrete, La Rioja, Spagna",
+          note: "Premiata con il primo premio per la sua opera scultorea 'Metamorphosis'.",
+        },
         {
           year: "2026",
           title: "Bienal Internacional de Cerámica de Manises",
@@ -603,12 +622,12 @@ export const translations: Record<Locale, Dict> = {
       materialsA: "Terracotta,",
       materialsB: "e pazienza.",
       materialsBody:
-        "Vania lavora con paste ad alta cottura che permettono pareti tirate sottili senza perdere struttura. La finitura bianca opaca non è smalto fine a sé stesso — serve la forma, l'ombra e il vuoto.",
+        "Vania lavora con paste a bassa e alta temperatura che le permettono di tendere le pareti al limite senza comprometterne la struttura. La finitura bianco opaco non è smalto in sé, ma serve a esaltare la forma, l'ombra e il vuoto.",
       processEyebrow: "Processo",
       processA: "Modellato a mano,",
       processB: "lentamente.",
       processBody:
-        "Niente stampi, niente tornio. Ogni pezzo nasce da un foglio piatto portato al volume nell'arco di giorni, asciugato sotto telo e cotto due volte. Le aperture non sono mai decorative — sono il modo in cui la scultura respira.",
+        "Niente stampi, niente tornio. Ogni pezzo inizia con un blocco o una lastra piatta che viene modellata nel corso di diversi giorni, asciugata sotto un panno e cotta. Le aperture non sono decorative: sono il modo in cui la scultura respira.",
       seeWork: "Vedi le opere →",
       getInTouch: "Contatta",
       metaTitle: "Chi sono — Vania Suisola",
@@ -618,20 +637,16 @@ export const translations: Record<Locale, Dict> = {
         "Da Firenze ad Alicante: una scultrice che lavora forme ceramiche organiche modellate a mano.",
     },
     work: {
-      eyebrow: "Opere selezionate · 2022 — Attualità",
-      h1a: "La collezione delle",
-      h1b: " forme cave.",
-      intro:
-        "Una serie crescente di sculture in terracotta modellate a mano. Ogni opera è unica, costruita senza stampi e rifinita in bianco opaco non smaltato.",
       items: [
         {
-          note: "Selezionata — Biennale Internazionale di Ceramica, Manises 2026.",
+          note: "Vincitore del Concurso de Pieza Única 2026 di Navarrete, La Rioja, Spagna.",
         },
         { note: "Uno studio sulla continuità e sul flusso organico, eliminando i confini tra interno ed esterno." },
-        { note: "Catturare il ritmo organico e il movimento dell'argilla come una marea." },
+        { note: "Catturare il ritmo oragnico e il movimento dell'argilla come una marea." },
         { note: "Una cattura silenziosa del moto e del movimento sospeso. Selezione ufficiale per la Biennale Internazionale di Ceramica, Marratxí 2025." },
         { note: "Tensione idrodinamica e velocità tradotte in piani ceramici sinuosi." },
         { note: "Un'esplorazione orizzontale del tempo sospeso e della leggerezza fisica. Selezione ufficiale per la Biennale Internazionale di Ceramica, Manises 2026." },
+        { note: "Soglia — naviga il delicato spazio tra isolamento e intimità. Modellata a mano in terracotta bianca, le sue aperture ad anello e le curve interconnesse trattano il vuoto non come una mancanza, ma come un luogo di contatto.\n\nMentre i sistemi di supporto tradizionali e le comunità affiatate si sfaldano, Suisola utilizza la natura umile e quotidiana dell'argilla per suggerire che l'appartenenza non è uno stato permanente. È invece un impegno attivo e continuo, costruito lentamente attraverso la cura, la presenza e la volontà di colmare le distanze tra di noi." },
       ],
       ctaEyebrow: "Acquisizioni e commissioni",
       ctaA: "Opere disponibili e pezzi su commissione",
@@ -639,10 +654,10 @@ export const translations: Record<Locale, Dict> = {
       enquire: "Richiedi →",
       metaTitle: "Opere — Vania Suisola",
       metaDesc:
-        "Sculture ceramiche selezionate di Vania Suisola — terracotta modellata a mano, inclusa l'opera selezionata per la Bienal Internacional de Manises.",
+        "Sculture ceramiche selezionate di Vania Suisola — terracotta modellata a mano, inclusa l'opera selezionata per la Bienal Internacional di Manises.",
       ogDesc:
         "Sculture ceramiche selezionate, 2023–2024. Terracotta, fatte a mano.",
-      materials: { earthenware: "Terracotta", earthenware2: "Terracotta" },
+      materials: { earthenware: "Terracotta", earthenware2: "Terracotta", whiteEarthenware: "Terracotta bianca, modellata a mano" },
     },
     contact: {
       eyebrow: "Contatti",

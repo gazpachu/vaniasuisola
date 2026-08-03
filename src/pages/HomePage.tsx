@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import heroImg from "@/assets/sculpture-hero.jpeg";
-import imgSuspension1 from "@/assets/suspension-del-instante1.jpg";
-import imgSuspension2 from "@/assets/suspension-del-instante2.jpg";
-import imgSuspension3 from "@/assets/suspension-del-instante3.jpg";
+import imgSoglia1 from "@/assets/soglia-1.jpg";
+import imgSoglia2 from "@/assets/soglia-2.jpg";
+import imgSoglia3 from "@/assets/soglia-3.jpg";
 import type { Locale } from "@/i18n/translations";
 import { t as translate } from "@/i18n/translations";
 import { localizedPath } from "@/i18n/useLocale";
@@ -113,12 +113,12 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div className="grid gap-6 md:gap-10 md:grid-cols-12">
             <figure 
               className="md:col-span-7 group overflow-hidden bg-card cursor-zoom-in"
-              onClick={() => setLightboxImg(imgSuspension1)}
+              onClick={() => setLightboxImg(imgSoglia1)}
             >
               <div className="overflow-hidden aspect-[4/5]">
                 <img
-                  src={imgSuspension1}
-                  alt="Ceramic sculpture — Suspension del instante series"
+                  src={imgSoglia1}
+                  alt="Ceramic sculpture — Soglia series"
                   className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                 />
               </div>
@@ -138,12 +138,12 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div className="md:col-span-5 flex flex-col gap-6 md:gap-10">
               <figure 
                 className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
-                onClick={() => setLightboxImg(imgSuspension2)}
+                onClick={() => setLightboxImg(imgSoglia2)}
               >
                 <div className="overflow-hidden aspect-[4/5]">
                   <img
-                    src={imgSuspension2}
-                    alt="Ceramic sculpture detail — Suspension del instante detail"
+                    src={imgSoglia2}
+                    alt="Ceramic sculpture detail — Soglia detail"
                     className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                   />
                 </div>
@@ -162,12 +162,12 @@ export function HomePage({ locale }: { locale: Locale }) {
 
               <figure 
                 className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
-                onClick={() => setLightboxImg(imgSuspension3)}
+                onClick={() => setLightboxImg(imgSoglia3)}
               >
                 <div className="overflow-hidden aspect-[4/5]">
                   <img
-                    src={imgSuspension3}
-                    alt="Ceramic sculpture close-up — Suspension del instante profile"
+                    src={imgSoglia3}
+                    alt="Ceramic sculpture close-up — Soglia profile"
                     className="h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                   />
                 </div>
