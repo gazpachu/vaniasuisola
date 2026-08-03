@@ -31,7 +31,6 @@ type Dict = {
     allWork: string;
     viewAll: string;
     earthenware: string;
-    earthenware2: string;
     featuredTitle1: string;
     featuredTitle2: string;
     featuredTitle3: string;
@@ -98,7 +97,7 @@ type Dict = {
     metaTitle: string;
     metaDesc: string;
     ogDesc: string;
-    materials: { earthenware: string; earthenware2: string; whiteEarthenware: string };
+    materials: { earthenware: string; blackStoneware: string };
   };
 
   // Contact
@@ -174,7 +173,6 @@ export const translations: Record<Locale, Dict> = {
       allWork: "All work →",
       viewAll: "View all work →",
       earthenware: "White earthenware, hand-built · 2026",
-      earthenware2: "White earthenware, hand-built · 2026",
       featuredTitle1: "Soglia",
       featuredTitle2: "Soglia (detail)",
       featuredTitle3: "Soglia (view)",
@@ -270,7 +268,7 @@ export const translations: Record<Locale, Dict> = {
       items: [
         { note: "Winner of the 2026 Concurso de Pieza Única in Navarrete, La Rioja, Spain." },
         { note: "A study in continuity and organic flow, eliminating boundaries between interior and exterior." },
-        { note: "Capturing the organic rhythm and tide-like movement of clay." },
+        { note: "Selected: pieza única N.A.CE 2024. Capturing the organic rhythm and tide-like movement of clay." },
         { note: "A quiet capture of momentum and suspended movement. Selected — International Biennial of Ceramic Art, Marratxí 2025." },
         { note: "Hydrodynamic tension and speed translated into sinuous ceramic planes." },
         { note: "A horizontal exploration of suspended time and physical weightlessness. Selected — Bienal Internacional de Cerámica, Manises 2026." },
@@ -285,7 +283,7 @@ export const translations: Record<Locale, Dict> = {
         "Selected ceramic sculptures by Vania Suisola — hand-built porcelain and stoneware works, including the piece selected for the Bienal Internacional de Manises.",
       ogDesc:
         "Selected ceramic sculptures, 2023–2024. Porcelain and stoneware, hand-built.",
-      materials: { earthenware: "Earthenware", earthenware2: "Earthenware", whiteEarthenware: "White earthenware, hand-built" },
+      materials: { earthenware: "Earthenware", blackStoneware: "Black stoneware" },
     },
     contact: {
       eyebrow: "Get in touch",
@@ -361,7 +359,6 @@ export const translations: Record<Locale, Dict> = {
       allWork: "Toda la obra →",
       viewAll: "Ver toda la obra →",
       earthenware: "Loza blanca, modelada a mano · 2026",
-      earthenware2: "Loza blanca, modelada a mano · 2026",
       featuredTitle1: "Soglia",
       featuredTitle2: "Soglia (detalle)",
       featuredTitle3: "Soglia (vista)",
@@ -458,7 +455,7 @@ export const translations: Record<Locale, Dict> = {
           note: "Ganadora del Concurso de la Pieza Única 2026 en Navarrete, La Rioja, España.",
         },
         { note: "Un estudio sobre la continuidad y el flujo orgánico, eliminando las fronteras entre el interior y el exterior." },
-        { note: "Capturando el ritmo orgánico y el movimiento de la arcilla como una marea." },
+        { note: "Seccionada: pieza única N.A.CE 2024. Capturando el ritmo orgánico y el movimiento de la arcilla como una marea." },
         { note: "Una captura silenciosa del impulso y del movimiento suspendido. Selección oficial en la Biennal Internacional de Cerámica de Marratxí 2025." },
         { note: "Tensión hidrodinámica y velocidad traducidas en planos cerámicos sinuosos." },
         { note: "Una exploración horizontal del tiempo suspendido y la ingravidez física. Selección oficial en la Bienal Internacional de Cerámica, Manises 2026." },
@@ -473,7 +470,7 @@ export const translations: Record<Locale, Dict> = {
         "Esculturas cerámicas seleccionadas de Vania Suisola — loza modelada a mano, incluida la pieza seleccionada para la Bienal Internacional de Manises.",
       ogDesc:
         "Esculturas cerámicas seleccionadas, 2023–2024. Loza, hechas a mano.",
-      materials: { earthenware: "Loza", earthenware2: "Loza", whiteEarthenware: "Loza blanca, modelada a mano" },
+      materials: { earthenware: "Loza blanca", blackStoneware: "Gres negro" },
     },
     contact: {
       eyebrow: "Contacto",
@@ -549,7 +546,6 @@ export const translations: Record<Locale, Dict> = {
       allWork: "Tutte le opere →",
       viewAll: "Vedi tutte le opere →",
       earthenware: "Terracotta bianca, modellata a mano · 2026",
-      earthenware2: "Terracotta bianca, modellata a mano · 2026",
       featuredTitle1: "Soglia",
       featuredTitle2: "Soglia (dettaglio)",
       featuredTitle3: "Soglia (vista)",
@@ -642,7 +638,7 @@ export const translations: Record<Locale, Dict> = {
           note: "Vincitore del Concurso de Pieza Única 2026 di Navarrete, La Rioja, Spagna.",
         },
         { note: "Uno studio sulla continuità e sul flusso organico, eliminando i confini tra interno ed esterno." },
-        { note: "Catturare il ritmo oragnico e il movimento dell'argilla come una marea." },
+        { note: "Sezione: pezzo unico N.A.CE 2024. Catturare il ritmo oragnico e il movimento dell'argilla come una marea." },
         { note: "Una cattura silenziosa del moto e del movimento sospeso. Selezione ufficiale per la Biennale Internazionale di Ceramica, Marratxí 2025." },
         { note: "Tensione idrodinamica e velocità tradotte in piani ceramici sinuosi." },
         { note: "Un'esplorazione orizzontale del tempo sospeso e della leggerezza fisica. Selezione ufficiale per la Biennale Internazionale di Ceramica, Manises 2026." },
@@ -657,7 +653,7 @@ export const translations: Record<Locale, Dict> = {
         "Sculture ceramiche selezionate di Vania Suisola — terracotta modellata a mano, inclusa l'opera selezionata per la Bienal Internacional di Manises.",
       ogDesc:
         "Sculture ceramiche selezionate, 2023–2024. Terracotta, fatte a mano.",
-      materials: { earthenware: "Terracotta", earthenware2: "Terracotta", whiteEarthenware: "Terracotta bianca, modellata a mano" },
+      materials: { earthenware: "Terracotta", blackStoneware: "Gres nero" },
     },
     contact: {
       eyebrow: "Contatti",

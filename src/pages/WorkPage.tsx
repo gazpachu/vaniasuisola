@@ -115,7 +115,7 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
   return (
     <>
       <figure className={`group/card ${w.span} bg-card overflow-hidden flex flex-col`}>
-        <div 
+        <div
           className={`relative overflow-hidden ${w.aspect} select-none cursor-zoom-in`}
           onClick={handleCardClick}
           onTouchStart={handleTouchStart}
@@ -128,9 +128,8 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
               key={imgSrc}
               src={imgSrc}
               alt={`${w.title} (view ${imgI + 1}) — ceramic sculpture by Vania Suisola`}
-              className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out ${
-                imgI === currentIdx ? "opacity-100 scale-100 z-10" : "opacity-0 scale-[1.02] z-0 pointer-events-none"
-              }`}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-in-out ${imgI === currentIdx ? "opacity-100 scale-100 z-10" : "opacity-0 scale-[1.02] z-0 pointer-events-none"
+                }`}
             />
           ))}
 
@@ -166,9 +165,8 @@ function ArtworkCard({ w, note }: { w: Artwork; note: string }) {
                       e.preventDefault();
                       setCurrentIdx(imgI);
                     }}
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      imgI === currentIdx ? "bg-gold w-3" : "bg-bone/40 hover:bg-bone"
-                    }`}
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${imgI === currentIdx ? "bg-gold w-3" : "bg-bone/40 hover:bg-bone"
+                      }`}
                     aria-label={`Go to slide ${imgI + 1}`}
                   />
                 ))}
@@ -244,7 +242,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
       n: "02",
       title: "Loop",
       year: "2024",
-      material: t.materials.earthenware,
+      material: t.materials.blackStoneware,
       size: "39 × 29 × 16.5 cm",
       images: [imgLoop1, imgLoop2, imgLoop3, imgLoop4, imgLoop5],
       span: "md:col-span-4",
@@ -274,7 +272,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
       n: "05",
       title: "Shark",
       year: "2024",
-      material: t.materials.earthenware,
+      material: t.materials.blackStoneware,
       size: "—",
       images: [imgShark1, imgShark2, imgShark3, imgShark4, imgShark5],
       span: "md:col-span-12",
@@ -294,7 +292,7 @@ export function WorkPage({ locale }: { locale: Locale }) {
       n: "07",
       title: "Soglia",
       year: "2026",
-      material: t.materials.whiteEarthenware,
+      material: t.materials.earthenware,
       size: "48.5 × 19.5 × 18 cm",
       images: [imgSoglia1, imgSoglia2, imgSoglia3, imgSoglia4],
       span: "md:col-span-8",

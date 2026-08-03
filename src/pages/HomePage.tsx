@@ -111,7 +111,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid gap-6 md:gap-10 md:grid-cols-12">
-            <figure 
+            <figure
               className="md:col-span-7 group overflow-hidden bg-card cursor-zoom-in"
               onClick={() => setLightboxImg(imgSoglia1)}
             >
@@ -136,7 +136,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </figure>
 
             <div className="md:col-span-5 flex flex-col gap-6 md:gap-10">
-              <figure 
+              <figure
                 className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
                 onClick={() => setLightboxImg(imgSoglia2)}
               >
@@ -153,14 +153,14 @@ export function HomePage({ locale }: { locale: Locale }) {
                       {t.featuredTitle2}
                     </p>
                     <p className="text-[0.65rem] tracking-[0.28em] uppercase text-muted-foreground mt-2">
-                      {t.earthenware2}
+                      {t.earthenware}
                     </p>
                   </div>
                   <span className="text-gold/60 text-sm">02</span>
                 </figcaption>
               </figure>
 
-              <figure 
+              <figure
                 className="group overflow-hidden bg-card flex-1 cursor-zoom-in"
                 onClick={() => setLightboxImg(imgSoglia3)}
               >
